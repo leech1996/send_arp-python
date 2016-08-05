@@ -14,7 +14,8 @@ my_ip=netifaces.ifaddresses(dev)[netifaces.AF_INET][0]['addr']
 gate_ip=netifaces.gateways()['default'][netifaces.AF_INET][0]
 
 print dev,my_mac,my_ip, gate_ip
-vic_ip="192.168.126.128"
+vic_ip=sys.argv[1]
+print vic_ip
 
 print("Send Arp Request") 
 
